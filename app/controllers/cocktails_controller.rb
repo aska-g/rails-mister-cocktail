@@ -3,13 +3,16 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @ingredients = Ingredient.all
   end
 
   def show
+    @cocktail = Cocktail.find(params[:id])
+    @doses = @cocktail.doses
   end
 
   def new
-    @cocktail = Cocktails.new
+    @cocktail = Cocktail.new
   end
 
   def create
@@ -18,11 +21,9 @@ class CocktailsController < ApplicationController
     # respond_to do |format|
     if @cocktail.save
       redirect_to @cocktail
-      format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
-      format.json { render :show, status: :created, location: @cocktail }
+
     else
-      format.html { render :new }
-      format.json { render json: @cocktail.errors, status: :unprocessable_entity }
+      render :new
     end
   end
 

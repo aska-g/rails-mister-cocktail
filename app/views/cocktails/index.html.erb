@@ -1,1 +1,33 @@
-<h1>Cocktails</h1>
+
+<div class="wrapper">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <div class="row text-center">
+      <h1>Cocktails</h1>
+    </div>
+    <div class="row">
+    <div class="container text-center btn-wrapper">
+      <%= link_to 'Add a new cocktail', new_cocktail_path, class: "btn btn-success text-center" %>
+    </div>
+
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail do %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card-wrapper">
+              <div class="card" ">
+
+                <div class="card-description"><h2><%= cocktail.name %></h2>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+

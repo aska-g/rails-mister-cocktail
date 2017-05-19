@@ -1,0 +1,26 @@
+<div class="container text-center">
+  <p id="notice"><%= notice %></p>
+
+
+  <h1><%= @cocktail.name %></h1>
+  </p>
+
+    <h2>Ingredients:</h2>
+    <table class="table">
+    <% @doses.each do |dose| %>
+      <tr>
+      <td><strong><%= dose.ingredient.name %></strong></td>
+      <td><%= dose.description %></td>
+      <td><%= link_to 'Edit', edit_cocktail_dose_path(dose), class: "btn btn-primary text-center" %></td>
+
+      <td><%= link_to 'Destroy', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+    <% end %>
+    </table>
+
+    <div class="container text-center btn-wrapper">
+      <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: "btn btn-success text-center" %>
+    </div>
+
+
+
+</div>
