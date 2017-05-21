@@ -3,24 +3,32 @@
 
 
   <h1><%= @cocktail.name %></h1>
-  </p>
+  <%= cl_image_tag(cocktail_image_path(@cocktail)) %>
+
 
     <h2>Ingredients:</h2>
+    <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
     <table class="table">
     <% @doses.each do |dose| %>
       <tr>
       <td><strong><%= dose.ingredient.name %></strong></td>
       <td><%= dose.description %></td>
-      <td><%= link_to 'Edit', edit_cocktail_dose_path(dose), class: "btn btn-primary text-center" %></td>
+      <td><%= link_to 'Edit', edit_cocktail_dose_path(dose), class: "btn btn-medium-primary text-center" %></td>
 
-      <td><%= link_to 'Destroy', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      <td><%= link_to 'Remove', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-medium-danger" %></td>
     <% end %>
     </table>
-
-    <div class="container text-center btn-wrapper">
-      <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: "btn btn-success text-center" %>
     </div>
-
-
-
 </div>
+</div>
+<div class="container text-center">
+
+    <div class=" text-center btn-wrapper">
+      <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: "btn btn-medium text-center" %>
+    </div>
+    <div class="wrapper btn-wrapper">
+      <%= link_to 'Back', cocktails_path, class: 'btn btn-medium-danger' %>
+    </div>
+</div>
+

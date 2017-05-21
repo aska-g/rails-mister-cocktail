@@ -1,11 +1,21 @@
+<div class="container text-center">
+
 <%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fit %>
+
+<h1>Add an ingredient to <strong><%= @cocktail.name %></strong></h1>
+
   <%= f.error_notification %>
-<div class="form-inputs">
-    <%= f.input :ingredient_id, :collection => @ingredients %>
+<div class="form-inputs ">
+    <%= f.input :ingredient_id, :collection => @ingredients, :class => "form-input" %>
     <%= f.input :description %>
     <%= f.hidden_field :cocktail_id, :value => @cocktail.id %>
   </div>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => 'btn btn-medium btn-wrapper', value: 'Add'  %>
+  </div>
+  <div class='btn-wrapper wrapper'>
+    <%= link_to 'Back', @cocktail, class: 'btn btn-medium-danger' %>
   </div>
 <% end %>
+</div>

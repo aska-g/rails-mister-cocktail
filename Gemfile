@@ -62,3 +62,10 @@ gem 'autoprefixer-rails'
 # for API keys security
 gem 'figaro'
 
+# image storage
+gem 'cloudinary'
+# user image upload
+gem 'carrierwave', '~> 0.11.2'
+
+
+

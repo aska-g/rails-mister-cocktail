@@ -1,0 +1,73 @@
+.wrapper {
+  margin-bottom: 100px;
+}
+.btn-wrapper {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.card-wrapper {
+  margin: 20px;
+}
+
+.btn-medium {
+  color: #999999;
+  background: #ffffff;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+.btn-medium-primary {
+  color: #97B2AE;
+  background: #ffffff;
+  border: 1px solid #97B2AE;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+
+}
+.btn-medium-primary:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #97B2AE;
+
+}
+.btn-medium-danger {
+  color: #DF928E;
+  background: #ffffff;
+  border: 1px solid #DF928E;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.btn-medium-danger:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #DF928E;
+
+}
+
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+/* Build your own button classes ! */

@@ -11,10 +11,12 @@
 
   <div class="inputs">
     <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
 
   </div>
   <br>
-  <div class="actions">
-    <%= f.button :submit, class: 'btn btn-success' %>
+  <div class="actions btn-wrapper">
+    <%= f.button :submit, class: 'btn btn-medium ' %>
   </div>
 <% end %>
